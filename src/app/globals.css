@@ -1,21 +1,257 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.nav ul li{
+  transition: all .5s ease-in-out;
+}
+.nav ul li:hover{
+ color: #21ebd6;
+ cursor: pointer;
+ transform: translateY(-4px);
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+}
+.hero{
+
+  position: relative;
+}
+#element1{
+  position: absolute;
+  width: 10%;
+  height: auto;
+  right: 0;
+  bottom: 0;
+  opacity: .4;
+}
+#element2{
+  position: absolute;
+  width: 10%;
+  height: auto;
+  left: 0;
+  top: 0;
+  opacity: .4;
+}
+#element3{
+  position: absolute;
+  width: 10%;
+  height: auto;
+  right: 5%;
+  top: 2%;
+  
+}
+#element4{
+  position: absolute;
+  width: 7%;
+  height: auto;
+  right: 15%;
+  top: 50%;
+  
+}
+#element5{
+  position: absolute;
+  width: 7%;
+  height: auto;
+  right: 30%;
+  top: 5%;
+  
+}
+.hero p{
+  width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
+
+#btnchck{
+
+  padding: 15px;
+  border: #21ebd6 solid 2px;
+  color: #21ebd6;
+  cursor: pointer;
+  
+  margin-top: 15px;
+  transition: all .5s ease-in-out;
+  text-align: center;
+}
+#btnchck:hover{
+  transform: scale(1.03);
+  color: #142532;
+  border: #142532 solid 2px;
+  background-color: #21ebd6;
+  
+}
+
+.cardsrvc{
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  border:#21ebd6 solid 1px;
+  height: 100%;
+  
+}
+.cardsrvc:hover{
+  transform: scale(1.04);
+}
+#cardproejctcontainer{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10%;
+  row-gap: 5vh;
+  align-items: center;
+  justify-content: center;
+}
+.cardproejct{
+
+  border: #21ebd6 solid 1px;
+  display: flex;
+  flex-direction: column;
+}
+.category{
+  padding: 10px;
+  background-color: rgb(33, 235, 214,.2);
+  border: #21ebd6 solid 1px;
+  border-radius: 20px;
+  color: white;
+  width: fit-content;
+  margin-top: 2vh;
+  margin-left: 1%;
+}
+.cardproejct div{
+  width: fit-content;
+  transition: all .5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+column-gap: 5px;
+padding: 10px;
+background-color: #21ebd6;
+margin: 2vh 0 2vh 1%;
+border-radius: 20px;
+}
+.cardproejct div:hover{
+  background-color: #142532;
+  color: #21ebd6;
+  border: 1px solid #21ebd6;
+}
+#contactimg{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+#formcontact{
+  background: rgba( 33, 235, 214, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+#contactinfo{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+#btnform{
+  width: fit-content;
+  background: rgb(35,115,121);
+background: linear-gradient(24deg, rgba(35,115,121,0.6086367652529762) 15%, rgba(33,235,214,0.7879084739364496) 42%, rgba(20,37,50,0.6618580537683824) 100%); 
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: all .5s ease-in;
+}
+#btnform:hover{
+
+}
+textarea{
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 1px 1px 1px 5px;
+}
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+#calltoaction{
+  background: rgb(35,115,121);
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  border-radius: 20px;
+  background: linear-gradient(24deg, rgba(35,115,121,0.6086367652529762) 15%, rgba(33,235,214,0.7879084739364496) 42%, rgba(20,37,50,0.6618580537683824) 100%); 
+}
+#footer{
+  background-color: #21ebd6;
+  width: 100%; 
+  overflow: hidden
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
