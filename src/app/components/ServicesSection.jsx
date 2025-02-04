@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Code, Smartphone, Bot, Globe } from 'lucide-react';
+import { Code, Smartphone, Bot, Globe ,Youtube } from 'lucide-react';
+
 
 const ServiceCard = ({ icon: Icon, title, description }) => (
   <div
@@ -21,6 +22,10 @@ const ServicesSection = () => {
       icon: Code,
       title: 'Web Development',
       description: 'Crafting bespoke, responsive websites that captivate and convert.',
+    },{
+      icon: Youtube,
+      title: 'Youtube Thumbnails',
+      description: 'Creating eye-catching, high-converting YouTube thumbnails that boost clicks and engagement.',
     },
     {
       icon: Smartphone,
