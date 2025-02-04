@@ -26,7 +26,7 @@ const Hero = () => {
             .fromTo("#parahero", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .5, ease: "power1.inOut" })
             .fromTo("#btnchck", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: .5, ease: "power1.inOut" })
         const typed = new Typed(el.current, {
-            strings: [" Domain Names Consultant", "App Developer", "Web Developer", "Web Scraper / AUTOMATER"], // Strings to display
+            strings: ["Domain Names Consultant", "App Developer", "Web Developer", "Web Scraper / AUTOMATER","Thumbnails Creater"], // Strings to display
             // Speed settings, try diffrent values untill you get good results
             startDelay: 300,
             typeSpeed: 200,
